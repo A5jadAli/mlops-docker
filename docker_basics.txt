@@ -1,0 +1,14 @@
+Docker: What & Why
+Docker help developers build, package and deploy applications quickly and efficiently. It solves the problem of "it works on my machine" by creating a consistent environment across development, testing and production. Docker containers encapsulate eveything an app needs like code, libraries and dependencies ensuring it runs reliably on any system.
+
+Docker: Its benefits
+- Portability: Docker containers can run consistently across different environments (development, testing, production) without worrying about OS or platform differences. For example, a container eynning on your latop will work the same on a cloud server.
+- Isolation: Each docker container is isolated from others, which means apps won't interfere with one another. This is useful when running multiple services or apps on the same machine without worrying about compatibility issues.
+- Scalability: Docker makes scaling apps easier. For example, if a web service is getting high traffic, you can quickly spin up more containers to handle the load, and when traffic decreases, you can remove containers to save resources.
+
+Docker vs VM
+Docker: Containers share the host OS and use fewer resources making them lightweight, starting a container takes sevonds. For example, if you need to run 10 microservices, each can run in its own container, using less memory and starting quickly.
+VM: Virtual machien run a full OS for each instance making them heavy and slower to start (minutes). They consume more resources becuase they need to virtualize hardware, not just the app. For example, running the same 10 microservuces in VMs will require singinifactly more memory and CPU becuase each VM has its own OS.
+In summary, docker is lighter, faster and more portable compared to VMs which are heavier and slower due to full OS virtualization.
+
+Docker Engine: It is the core technology

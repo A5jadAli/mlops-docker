@@ -1,0 +1,2 @@
+> Create a github repo and clone it in your local.
+> Create a "app.py" file in the root directory
