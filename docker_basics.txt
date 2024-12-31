@@ -12,3 +12,11 @@ VM: Virtual machien run a full OS for each instance making them heavy and slower
 In summary, docker is lighter, faster and more portable compared to VMs which are heavier and slower due to full OS virtualization.
 
 Docker Engine: It is the core technology
+
+DockerFile: It is a text file with instructions on how to build a docker image. It's a blueprint for the image, specifying the environment, app and dependencies.
+-> Key Components:
+    - FROM: Specifies the base image
+    - COPY or ADD: Add files from your host system into the image
+    - RUN: Executes commands in the image, such as installing software
+    - CMD or ENTRYPOINT: Defines the command that runs when the container starts
+    - EXPOSE: Specifies the port the container will listen on
