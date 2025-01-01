@@ -11,7 +11,12 @@ Docker: Containers share the host OS and use fewer resources making them lightwe
 VM: Virtual machien run a full OS for each instance making them heavy and slower to start (minutes). They consume more resources becuase they need to virtualize hardware, not just the app. For example, running the same 10 microservuces in VMs will require singinifactly more memory and CPU becuase each VM has its own OS.
 In summary, docker is lighter, faster and more portable compared to VMs which are heavier and slower due to full OS virtualization.
 
-Docker Engine: It is the core technology
+
+Docker Engine: It is the core technology that powers Docker, consisting of three main parts:
+
+1. Docker Daemon (Server): This is the background service running on the host machine. It is responsible for managing Docker objects like containers, images, networks, and volumes. The daemon listens for API requests and performs the actions you request.
+2. REST API: This allows communication between the Docker Daemon and the client. You can use the API to interact with Docker, such as creating containers or images.
+3. Docker CLI (Client): The command-line interface (CLI) is the tool you use to interact with Docker. When you type commands like docker run or docker build, the CLI sends instructions to the Docker Daemon via the REST API.
 
 DockerFile: It is a text file with instructions on how to build a docker image. It's a blueprint for the image, specifying the environment, app and dependencies.
 -> Key Components:
@@ -20,3 +25,13 @@ DockerFile: It is a text file with instructions on how to build a docker image. 
     - RUN: Executes commands in the image, such as installing software
     - CMD or ENTRYPOINT: Defines the command that runs when the container starts
     - EXPOSE: Specifies the port the container will listen on
+
+A Docker Registry is a storage and distribution system for Docker images. It allows users to share, manage, and access Docker images.
+Public Registry: Docker Hub is the most popular public registry, where anyone can pull or push images. Public registries are free but open to everyone.
+Private Registry: You can set up a private registry to store images within your organization, providing better security and control over your images.
+Cloud Registries: Many cloud providers like AWS (ECR), Google Cloud (GCR), and Azure (ACR) offer managed registries with built-in security, scalability, and integration with cloud services.
+
+Benefits:
+Centralized Storage: Easily manage and store Docker images in one place.
+Versioning: Registries keep track of image versions, making it easy to manage updates.
+Collaboration: Public registries allow users to share images with the global developer community, while private ones facilitate collaboration within organizations.
